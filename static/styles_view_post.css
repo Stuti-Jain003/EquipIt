@@ -1,0 +1,290 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #DDD0C8;
+    color: #fefefe;
+    margin-top: 5rem;
+}
+body{
+    background-color: #F5F5F5;
+}
+.container h2,.container h3 {
+    color: #323232;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    color: #323232;
+    padding: 4rem;
+}
+
+.comment {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    
+    padding: 10px;
+
+}
+.comment p{
+    border: 1px solid #3232327c;
+}
+
+.reply {
+    border: 1px solid #eee;
+    margin: 10px 0;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+textarea {
+    width: 100%;
+    /* height: 50%; */
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 4px;
+}
+
+button:hover {
+    background-color: #3232329e;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2, h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .comment, .reply {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.8em;
+    }
+}
+
+
+/* new change */
+.how {
+    background-color: #fff8f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.how p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+.video-container {
+    text-align: center;
+}
+
+.video-container iframe {
+    display: inline-block;
+}
+/* Add this style for centering the title */
+.content-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.video-container {
+    text-align: center;
+}
+
+.video-container iframe {
+    display: inline-block;
+}
+
+
+footer {
+    position:relative;
+    background-color: #f3f3f3;
+    color: #716c6c;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h2 {
+    color: #716c6c;
+}
+
+.footer-section p {
+    font-size: 12px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #cfcaca;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+/* footer end  */
+/* Update your existing CSS styles */
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #D3D3D3; /* White background for the entire container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.post{
+    margin-top: 120px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.container h2, .container h3 {
+    color: #4070F4;
+    text-align: center;
+    padding: 10px;
+}
+
+.comment, .reply {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #F5F5F5; /* Light background for comments and replies */
+    border-radius: 8px;
+}
+
+.comment p {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.reply {
+    margin: 20px;
+    background-color: #F5F5F5; /* Slightly different background for replies */
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4070F4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 4px;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: #3250A1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2, h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .comment, .reply {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.8em;
+    }
+}
+
+/* Additional styles for post and comment separation */
+.container .post {
+    background-color: #D3D3D3; /* Light yellow background for posts */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.container .comments {
+    background-color: #D3D3D3; /* Light blue background for comments */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* New styles for comment and reply separation */
+.comment, .reply {
+    margin: 10px 0;
+}
+/* General styles */
+body {
+    background-color: #F5F5F5;
+    color: #323232;
+    font-family: 'Arial', sans-serif;
+}
+
+
+footer{
+    margin-top: 30px;
+}

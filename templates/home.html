@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_home.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>EquipIt! - Home</title>
+</head>
+<body>
+    <!-- Include the provided navigation code here -->
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="{{ url_for('home') }}">EquipIt!</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="{{ url_for('home') }}">EquipIt</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    {% if current_user.is_authenticated %}
+                    <!-- If the user is logged in, show account-related links -->
+                        <li><a href="{{ url_for('account') }}">Account</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    
+                    {% else %}
+                    <!-- If the user is not logged in, show login and signup links -->
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
+                        <li><a href="{{ url_for('signup') }}">Sign up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+
+                    <div class="search-field">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <i class='bx bx-search' id="searchButton"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='img/i1.png') }}" alt="" srcset="" class="image">
+        <!-- <img src="/images/foreground.png" alt="" srcset="" class="fore"> -->
+        <h1>EQUIP IT</h1>
+        <p>"EquipIt! - Your go-to resource for DIY solutions and expert advice on repairing and maintaining home appliances, making equipment challenges a thing of the past."</p>
+    </div>
+
+    <!-- <div class="service"><h1>Our Services</h1></div> -->
+
+    <div class="container-3">
+
+        <div class="service"><h1>Our Services</h1></div>
+        
+        <div class="art">
+            <div class="nut one">
+                Washing Machine
+                <a href="{{ url_for('search') }}">Learn more</a>
+            </div>
+            <div class="nut two">
+                Microwave
+                <a href="{{ url_for('search') }}">Learn more</a>
+            </div>
+            <div class="nut three">
+                Refrigerator
+                <a href="{{ url_for('search') }}">Learn more</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>"EquipIt! - Your go-to resource for DIY solutions and expert advice on repairing and maintaining home appliances, making equipment challenges a thing of the past."</p>
+            </div>
+    
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            &copy; 2023 EquipIt! 
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script_home.js') }}"></script>
+    <script src="{{ url_for('static', filename='script_search.js') }}"></script>
+</body>
+</html>

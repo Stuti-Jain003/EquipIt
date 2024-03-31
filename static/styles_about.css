@@ -1,0 +1,66 @@
+/* Add the existing styles here */
+
+/* Add new styles for improved responsiveness and aesthetics */
+body {
+    background-color: #A8A8A8;
+    /* color: #fff; */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    /* font-size: 10px; */
+}
+
+
+.content-container h1, h2 {
+    color: #1b2626;
+    margin-top: 10px;
+}
+.content-container,.container p,ul{
+    padding: 2rem;
+}
+.content-container ul{
+    list-style: none;
+}
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+.content-container {
+    margin: 5rem;
+    margin-top: 130px;
+    padding: 30px;
+    padding-left: 30px;
+    background-color: #D3D3D3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .content-container {
+        padding: 20px;
+        margin-top: 120px;
+        padding-left: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Dark Theme */
+.dark-theme {
+    /* background-color: #1b2626; */
+    color: #fff;
+}
+
+
